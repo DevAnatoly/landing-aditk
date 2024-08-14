@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фронтенд</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner"><a class="logo" href="index.html">
+            <svg class="icon-logo">
+              <use xlink:href="sprites.svg#logo"></use>
+            </svg></a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item"><a class="menu__list-link" href="#!">Кто мы</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#!">Что мы предлагаем</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#!">Этапы</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="articles.html">Полезные статьи</a></li>
+              <li class="menu__list-item">
+                    <button class="button" aria-label="none">Оставить заявку</button>
+              </li>
+            </ul><img class="mobile-menu" src="images/menu-mobile.svg" alt="mobile menu">
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <section class="single-article">
+        <div class="container">
+          <div class="single-article__inner">
+            <header class="single-article__data">23 июня 2021</header>
+            <h1 class="single-article__title">Как тестировать сайты</h1>
+            <h2 class="single-article__subtitle">Чтобы потом не было стыдно</h2>
+            <p class="single-article__text">Допустим, вы сделали сайт, но у вас нет тестировщика, который может всё проверить. Вот короткая инструкция, на что смотреть, чтобы с большой вероятностью после запуска всё было в порядке.</p>
+            <p class="single-article__text">Допустим, вы сделали сайт, но у вас нет тестировщика, который может всё проверить. Вот короткая инструкция, на что смотреть, чтобы с большой вероятностью после запуска всё было в порядке.</p>
+            <p class="single-article__alarm">Предупреждение: статья не претендует на академическую полноту, но точно поможет что-нибудь не упустить.</p>
+            <h3 class="single-article__title-sub">Что проверять:</h3>
+            <ol class="single-article__orderlist">
+              <li class="single-article__item">Элементы страницы расположены как на макете на всех устройствах.</li>
+              <li class="single-article__item">Сайт одинаково выглядит и работает во всех нужных браузерах.</li>
+              <li class="single-article__item">Кнопки нажимаются и после этого что-то происходит, слайдеры крутятся, гамбургеры раскрываются.</li>
+              <li class="single-article__item">Все JavaScript-скрипты работают корректно.</li>
+              <li class="single-article__item">Отображается правильный контент.</li>
+              <li class="single-article__item">Отдаются нужные заголовки.</li>
+              <li class="single-article__item">Загружаются правильные шрифты.</li>
+              <li class="single-article__item">Фавиконка установлена.</li>
+              <li class="single-article__item">Текст отображается не кракозябрами (в 2020 такое редко, но бывает).</li>
+              <li class="single-article__item">Курсор интерактивный на интерактивных элементах и обычный на обычных.</li>
+              <li class="single-article__item">С локализацией всё в порядке (русская, английская версия).</li>
+              <li class="single-article__item">Страница не разъезжается, если включить блокировщик рекламы.</li>
+            </ol>
+            <p class="single-article__text">Иногда используют автоматические тесты, которые сравниваются отрендеренный результат кода аля интерфейс с рендер-версией приложения. Фактически, это сравнение скриншотов. Конечно, автотесты можно подготовить и для тестирования интерактивных элементов.</p>
+            <h3 class="single-article__title-sub">Инструменты:</h3>
+            <ul class="single-article__unorderlist">
+              <li class="single-article__item">Реальные браузеры и устройства.</li>
+              <li class="single-article__item">Эмуляторы (BrowserStack, LambdaTest, Browsera, BrowserShots).</li>
+            </ul>
+            <h3 class="single-article__title-sub">Ошибки JavaScript</h3>
+            <p class="single-article__text">Если в коде есть ошибки, их будет видно в консоли разработчика. Также там можно обратить внимание на запросы (время и коды ответов) и посмотреть размер загружаемых файлов. И если размер большой, обсудить с разработчиками оптимизацию кода на JavaScript, шрифтов и изображений.</p>
+            <h3 class="single-article__title-sub">Валидность кода</h3>
+            <p class="single-article__text">Нужно убедиться, что код удовлетворяет стандартам HTML/CSS, для этого есть специальные валидаторы.</p>
+            <p class="single-article__text">Инструмент валидации оценивает синтаксис, находит синтаксические ошибки типа пропущенных символов и ошибочных тегов и т.д. И отлавливает одну из частых ошибок вложенности тегов.</p>
+            <p class="single-article__text">Часто в результате сервисы валидации разметки, как и компиляторы в разработке, выдают список, разделённый на предупреждения и ошибки. Разница в критичности. Ошибки с максимальной вероятностью могут создать проблемы в работе кода. Это опечатки (да, техника любит точность), лишние или недостающие знаки. А вот к предупреждениям относятся неточности, которые с минимальной вероятностью навредят работе страницы, но не соответствуют стандартам. Это избыточный код, бессмысленные элементы и другие «помарки».</p><img class="single-article__code" src="images/code.webp" alt="code">
+            <h3 class="single-article__title-sub">Инструменты:</h3>
+            <ul class="single-article__unorderlist">
+              <li class="single-article__item">W3C валидатор</li>
+            </ul>
+            <figure class="single-article__validator"><img src="images/validator.webp" alt="validator">
+              <figcaption>Описание контента (опционально)</figcaption>
+            </figure><img class="single-article__quote" src="images/quote.webp" alt="quote">
+            <div class="single-article__author">
+              <dl>
+                <dt>Автор статьи</dt>
+                <dd>Соня Карпович</dd>
+              </dl>
+            </div>
+                  <button class="single-article__button" aria-label="none">Назад</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copy">&copy; 2021 ООО «АДИТК»</p><a class="footer__privacy" href="#!">Политика конфиденциальности </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

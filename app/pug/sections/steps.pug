@@ -1,0 +1,39 @@
+include ../components/button-main.pug
+- var proggresBarItems = ['Собеседование и тестовое', 'Подробный разбор критериев качества', 'Изучение новых тем + практика']
+section.steps
+    .container
+        .steps__inner
+            h2.steps__title { Этапы стажировки }
+            .steps__wrapper
+                .proggres_bar
+                    each item in proggresBarItems
+                        .proggres_bar-item
+                            p.proggres_bar-text #{item}
+            .steps__content
+                .steps__content-item.steps__content-item--active
+                    .steps__content-textbox
+                        h3.steps__content-title Собеседование и тестовое
+                        .steps__content-text
+                            p Познакомимся с актуальным стеком, изучим критерии качества работы, узнаем как тестировать и как верстать так, чтобы всем нравилось
+                            p Познакомимся с актуальным стеком, изучим критерии качества работы, узнаем как тестировать и как верстать так, чтобы всем нравилось
+                    img.steps__content-img(src="images/steps-1.webp", alt="step 1")
+                    .steps__content-button-wrapper
+                        +button-main('steps__button', 'Следующий этап')
+                .steps__content-item
+                    .steps__content-textbox
+                        h3.steps__content-title Подробный разбор критериев качества
+                        .steps__content-text
+                            p Познакомимся с Aктуальным Cтеком, изучим критерии качества работы, узнаем как тестировать и как верстать так, чтобы всем нравилось
+                            p Познакомимся с актуальным стеком, изучим критерии качества работы, узнаем как тестировать и как верстать так, чтобы всем нравилось
+                    img.steps__content-img(src="images/steps-1.webp", alt="step 1")
+                    .steps__content-button-wrapper
+                        +button-main('steps__button', 'Следующий этап')
+                .steps__content-item
+                    .steps__content-textbox
+                        h3.steps__content-title Изучение новых тем + практика
+                        .steps__content-text
+                            p Познакомимся с Aктуальным Cтеком, изучим критерии качества работы, узнаем как тестировать и как верстать так, чтобы всем нравилось
+                            p Познакомимся с актуальным стеком, изучим критерии качества работы, узнаем как тестировать и как верстать так, чтобы всем нравилось
+                    img.steps__content-img(src="images/steps-1.webp", alt="step 1")
+                    .steps__content-button-wrapper
+                        +button-main('steps__button', 'Следующий этап')

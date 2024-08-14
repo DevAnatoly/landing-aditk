@@ -1,0 +1,94 @@
+.single-article{
+    color: #292B37;
+    & .container{
+        max-width: 696px;
+    }
+    &__data{
+        @include p2;
+    }
+    &__title{
+        margin-top: 4px;
+        @include h1;
+    }
+    &__subtitle{
+        margin-top: 48px;
+        @include lead;
+        margin-bottom: 48px;
+    }
+    &__text{
+        margin-top: 20px;
+    }
+    & p{
+        @include p1;
+    }
+    &__alarm{
+        margin-top: 48px;
+        @include p1-strong;
+        color: $colorAccent;
+    }
+    &__title-sub{
+        @include h3;
+        margin-top: 48px;
+        margin-bottom: 16px;
+    }
+    &__orderlist{
+        @include p1;
+        margin-left: 32px;
+        margin-bottom: 48px;
+        list-style: decimal !important;
+    }
+    &__item:not(:last-child){
+        margin-bottom: 20px;
+    }
+    &__unorderlist{
+        @include p1;
+        margin-left: 22px;
+        list-style: initial !important;
+    }
+    &__validator{
+        margin-top: 48px;
+        & figcaption {
+            margin-top: 16px;
+            color: #C2C2C2;
+        }
+    }
+    &__code,
+    &__quote{
+        margin-top: 48px;
+    }
+    &__author{
+        padding-left: 48px;
+        position: relative;
+        &::before{
+            content: '';
+            background-image: url('../../../images/article_logo.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 0;
+        }
+        margin-top: 31px;
+        & dt{
+            @include p2;
+            color: #C2C2C2;
+        }
+        & dd{
+            margin-top: 4px;
+            @include p1-strong;
+        }
+    }
+    &__button{
+        margin-top: 48px;
+        margin-bottom: 112px;
+        @include button-main;
+        padding: 0.5555555555555556em 0.8888888888888888em 0.5555555555555556em 2.2222222222222223em; 
+        &::after{
+            top: 12px;
+            left: 14px;
+            transform: scale(-1);
+        }
+    }
+}

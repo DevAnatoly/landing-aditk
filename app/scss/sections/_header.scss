@@ -1,0 +1,98 @@
+.header{
+    padding: 28px 0;
+    border-bottom: 1px solid $colorText;
+    margin-bottom: 64px;
+    @media(max-width: 1300px){
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 32px;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media(max-width: 1300px){
+            justify-content: space-between;
+            position: relative;
+        }
+    }
+    .menu{
+        &__list{
+            display: flex;
+            align-items: center;
+            gap: 0 64px;
+            margin-left: 64px;
+            @media(max-width: 1300px){
+                position: absolute;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px 0px;
+                margin-left: 0px;
+                width: 100%;
+                top: -500px;
+                left: 0;
+                padding: 48px 0px 120px 124px;
+                transition: top .5s ease;
+                background-color: $colorBG;
+                z-index: 1;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-image: url(../../images/mobile-bg.webp);
+                    background-repeat: no-repeat;
+                    background-position: right bottom;
+                    background-size: contain;
+                    opacity: .05;
+                    top: 0;
+                    right: 12px;
+                    width: 287px;
+                    height: 364px;
+                    z-index: -1;
+                    @media(max-width: 550px){
+                        top: initial;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            @media(max-width: 550px){
+                padding: 48px 0px 160px 0px;
+            }
+            &-item{
+                text-wrap: nowrap;
+            }
+            &-item:nth-child(5){
+                margin-left: 60px;
+                @media(max-width: 1300px){
+                    margin-left: 0px;
+                    margin-top: 16px;
+                }
+            }
+            &-link{
+                @include p1;
+                color: $colorText;
+                    @media (max-width: 768px) {
+                    font-size: rem(16);
+                    line-height: 124%;
+                    }
+                &:hover{
+                    color: $colorAccentHover;
+                }
+            }
+        }
+        .mobile-menu{
+            display: none;
+            cursor: pointer;
+            @media(max-width: 1300px){
+                display: block;
+            }
+        }
+    }
+}
+.button{
+    @include button-main;
+    @media (max-width: 768px) {
+        font-size: rem(16);
+        line-height: 124%;
+        }
+}

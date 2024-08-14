@@ -1,0 +1,186 @@
+$browser-context: 16; // Default
+
+	@function rem($pixels, $context: $browser-context) {
+        @return calc(($pixels/16)) + rem;
+	}
+$colorBG: #FFFFFF;
+$colorText: #00151C;
+$colorTextLow: #E1E1E1;
+$colorTextFocus: #000000;
+$colorAccent: #7DBCCA;
+$colorAccentHover: #5D929E;
+$colorAccentFocus: #406B75;
+$colorError: #E93D3D;
+
+@mixin h1-promo{
+	font-family: 'Montserrat-Bold';
+	font-weight: 700;
+	font-size: rem(96);
+	line-height: 100%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(64);
+	// }
+	// @media (max-width: 320px) {
+	// 	font-size: rem(48);
+	// }
+}
+@mixin h1{
+	font-family: 'Montserrat-Medium';
+	font-weight: 500;
+	font-size: rem(64);
+	line-height: 122%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(32);
+	// 	line-height: 124%;
+	// }
+}
+@mixin h2{
+	font-family: 'Montserrat-Medium';
+	font-weight: 500;
+	font-size: rem(48);
+	line-height: 134%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(24);
+	// }
+}
+@mixin h3{
+	font-family: 'Montserrat-Medium';
+	font-weight: 500;
+	font-size: rem(24);
+	line-height: 132%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(20);
+	// 	line-height: 142%;
+	// }
+}
+@mixin lead{
+	font-family: 'PTMono-Regular';
+	font-weight: 400;
+	font-size: rem(32);
+	line-height: 126%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(24);
+	// 	line-height: 132%;
+	// }
+}
+@mixin p1{
+	font-family: 'PTMono-Regular';
+	font-weight: 400;
+	font-size: rem(18);
+	line-height: 112%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(16);
+	// 	line-height: 124%;
+	// }
+}
+@mixin p1-strong{
+	font-family: 'PTMono-Regular';
+	font-weight: 700;
+	font-size: rem(18);
+	line-height: 112%;
+	letter-spacing: 0;
+	// @media (max-width: 768px) {
+	// 	font-size: rem(16);
+	// 	line-height: 124%;
+	// }
+}
+@mixin p2{
+	font-family: 'PTMono-Regular';
+	font-weight: 400;
+	font-size: rem(14);
+	line-height: 116%;
+	letter-spacing: 0;
+}
+
+@mixin button-main{
+    display: inline-block;
+    position: relative;
+    padding: 0.5555555555555556em 2.2222222222222223em 0.5555555555555556em 0.8888888888888888em;
+    @include p1;
+    color: $colorText;
+    background-color: $colorBG;
+    border: 1px solid $colorText;
+    text-wrap: nowrap;
+    transition: all .4s ease;
+	cursor: pointer;
+	&::after{
+		content: '';
+		background-image: url('../../images/arrow-btn-black.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 12px;
+		right: 14px;
+	}
+    &:hover{
+        color: $colorBG;
+        background-color: $colorTextFocus;
+		&::after{
+			content: '';
+			background-image: url('../../images/arrow-btn-white.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 12px;
+			right: 14px;
+		}
+    }
+    &:active{
+        background-color: $colorTextFocus;
+    }
+}
+@mixin button-accent{
+    display: inline-block;
+    position: relative;
+    padding: 10px 40px 10px 16px;
+    @include p1;
+    color: $colorBG;
+    background-color: $colorAccent;
+	cursor: pointer;
+	&::after{
+		content: '';
+		background-image: url('../../images/arrow-btn-white.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 12px;
+		right: 14px;
+	}
+    &:hover{
+        background-color: $colorAccentHover;
+    }
+    &:active{
+        background-color: $colorAccentFocus;
+    }
+}
+
+@mixin button-second{
+    display: inline-block;
+    position: relative;
+    padding: 0.5555555555555556em 0.8888888888888888em 0.5555555555555556em 0.8888888888888888em;
+    @include p1;
+    color: $colorBG;
+    background-color: transparent;
+    border: 1px solid $colorBG;
+    text-wrap: nowrap;
+    transition: all .4s ease;
+	cursor: pointer;
+	&:hover{
+        background-color: $colorAccentHover;
+    }
+    &:active{
+        background-color: $colorAccentFocus;
+    }
+}

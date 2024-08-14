@@ -1,0 +1,23 @@
+.buttons{
+    position: absolute;
+    top: 93px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 38px;
+    @media (max-width: 768px) {
+      top: 72px;
+      gap: 0 24px;
+    }
+    @media (max-width: 500px) {
+      display: none;
+    }
+    & .arrow-prev,
+      .arrow-next{
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+    }
+    
+}

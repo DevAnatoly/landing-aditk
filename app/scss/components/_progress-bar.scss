@@ -1,0 +1,17 @@
+.progress-bar{
+    width: 100%;
+    background-color: $colorTextLow;
+    height: 1px; 
+    position: relative;
+    margin-top: 39px;
+    display: none;
+    @media(max-width: 500px){
+        display: block;
+    }
+    & .progress{
+        width: 10%; 
+        height: 100%;
+        background-color: $colorAccent;
+        transition: width 0.4s ease;
+    }
+}

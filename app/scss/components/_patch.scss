@@ -1,0 +1,32 @@
+.patch{
+    margin-top: 64px;
+    background-color: $colorAccent;
+    &__inner{
+        text-align: center;
+        padding: 64px 0;
+        @media (max-width: 400px) {
+            padding: 32px 0;
+        }
+    }
+    &__title{
+        @include h1;
+        color: $colorBG;
+        @media (max-width: 768px) {
+            font-size: rem(32);
+        	line-height: 124%;
+        }
+    }
+    & .button-patch{
+        display: block;
+        margin-top: 50px;
+        @include button-second;
+        &::after{
+            display: none;
+        }
+        @media (max-width: 768px) {
+            margin-top: 24px;
+            font-size: rem(16);
+        	line-height: 124%;
+        }
+    }
+}
